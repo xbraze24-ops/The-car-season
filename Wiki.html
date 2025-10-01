@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Complete Guide to Cars — Everything You Need to Know</title>
+  <meta name="description" content="A comprehensive single-page reference about cars: types, components, performance, maintenance, buying tips, safety, fuels, electrification, and glossary." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#0ea5a7;--glass:rgba(255,255,255,0.04);--wf:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--wf);background:linear-gradient(180deg,#071028 0%, #081426 100%);color:#e6eef6}
+    header{padding:28px 20px;border-bottom:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;gap:18px}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;font-weight:700;color:#022;box-shadow:0 6px 18px rgba(2,6,23,0.7)}
+    .title{font-size:18px;font-weight:700}
+    .subtitle{color:var(--muted);font-size:13px}
+    .container{display:grid;grid-template-columns:300px 1fr;gap:24px;padding:22px;max-width:1200px;margin:18px auto}
+    nav{position:sticky;top:18px;height:calc(100vh - 36px);overflow:auto;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    nav h3{margin:0 0 12px 0}
+    nav a{display:block;color:var(--muted);text-decoration:none;padding:8px;border-radius:8px;margin-bottom:6px}
+    nav a:hover{background:var(--glass);color:#fff}
+    main{padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;border:1px solid rgba(255,255,255,0.03);min-height:60vh}
+    section{margin-bottom:26px}
+    h1{font-size:28px;margin:6px 0}
+    h2{font-size:20px;margin:8px 0}
+    p{color:var(--muted);line-height:1.6}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    .muted{color:var(--muted);font-size:13px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600;font-size:12px}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:8px;text-align:left;border-bottom:1px dashed rgba(255,255,255,0.03);font-size:14px}
+    code{background:rgba(255,255,255,0.03);padding:4px 6px;border-radius:6px}
+    .search{display:flex;gap:8px;margin-bottom:12px}
+    .search input{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .controls{display:flex;gap:8px}
+    .btn{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);cursor:pointer}
+    footer{padding:18px;text-align:center;color:var(--muted);font-size:13px;margin-top:12px}
+    /* responsive */
+    @media (max-width:880px){.container{grid-template-columns:1fr;padding:12px}nav{position:relative;height:auto}} 
+    /* small helpers */
+    .specs{display:flex;flex-wrap:wrap;gap:10px}
+    .specs .item{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px;font-size:13px}
+    .faq .q{cursor:pointer;padding:10px;border-radius:8px;background:rgba(255,255,255,0.01);margin-bottom:8px}
+    .hidden{display:none}
+    .highlight{background:linear-gradient(90deg,#022 0%, rgba(14,165,167,0.06) 100%);padding:10px;border-radius:8px;color:#dff}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">C</div>
+    <div>
+      <div class="title">Complete Guide to Cars</div>
+      <div class="subtitle">Types, components, performance, maintenance, buying, fuels, electrification & glossary</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav aria-label="Table of contents">
+      <h3>Contents</h3>
+      <a href="#overview">Overview & history</a>
+      <a href="#types">Types of cars</a>
+      <a href="#components">Key components</a>
+      <a href="#powertrain">Powertrains (ICE, hybrid, EV)</a>
+      <a href="#performance">Performance & specs</a>
+      <a href="#safety">Safety & ratings</a>
+      <a href="#maintenance">Maintenance & troubleshooting</a>
+      <a href="#buying">Buying guide</a>
+      <a href="#fuels">Fuels & energy</a>
+      <a href="#environment">Environmental impact</a>
+      <a href="#glossary">Glossary</a>
+      <a href="#faq">FAQ</a>
+      <a href="#resources">Resources & further reading</a>
+    </nav>
+
+    <main>
+      <section id="overview">
+        <h1>Overview & brief history</h1>
+        <p>Cars (automobiles) are wheeled motor vehicles used for passenger transportation. Invented in the late 19th century, they rapidly shaped industry, urban design, and mobility. This guide summarizes modern knowledge about cars: major types, mechanical & electrical systems, buying and maintenance advice, environmental considerations, and a practical glossary.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h2>Evolution</h2>
+            <p class="muted">From steam and electric experiments in the 1800s to gasoline-powered mass production (Ford Model T, 1908), and today's shift toward electrification and autonomy.</p>
+          </div>
+          <div class="card">
+            <h2>Who uses cars?</h2>
+            <p class="muted">Private individuals, fleets, ride-hailing, logistics and emergency services. Cars vary dramatically by region due to regulation, infrastructure, and cultural norms.</p>
+          </div>
+          <div class="card">
+            <h2>Why it matters</h2>
+            <p class="muted">Cars influence economy, city design, energy demand, and emissions. Understanding them helps with safer, cost-effective, and greener choices.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="types">
+        <h2>Types of cars (by body & purpose)</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Hatchback</h3>
+            <p class="muted">Compact, rear door that opens upwards; efficient in urban settings.</p>
+          </div>
+          <div class="card"><h3>Sedan</h3><p class="muted">Traditional 3-box design with separate trunk; balanced comfort and efficiency.</p></div>
+          <div class="card"><h3>SUV / Crossover</h3><p class="muted">Higher ride height, more cargo space; ranges from compact crossovers to large off-road SUVs.</p></div>
+          <div class="card"><h3>Coupe & Convertible</h3><p class="muted">Sportier styling; two doors often, convertibles for open-top driving.</p></div>
+          <div class="card"><h3>Minivan / MPV</h3><p class="muted">Passenger-first, sliding doors, family-oriented interior space.</p></div>
+          <div class="card"><h3>Pickup Truck</h3><p class="muted">Open cargo bed, strong towing/utility capability.</p></div>
+          <div class="card"><h3>Sports & Supercars</h3><p class="muted">Performance-focused with high horsepower, advanced aerodynamics, premium materials.</p></div>
+        </div>
+      </section>
+
+      <section id="components">
+        <h2>Key components & systems</h2>
+        <p class="muted">A modern car is an integration of mechanical, electrical, and software systems. Below are the most important ones to understand.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Chassis & body</h3>
+            <p class="muted">Frame or unibody, crash structures, doors, glass, and exterior panels.</p>
+          </div>
+          <div class="card"><h3>Suspension & steering</h3><p class="muted">Controls ride comfort, handling; includes springs, dampers, anti-roll bars, tie rods.</p></div>
+          <div class="card"><h3>Brakes</h3><p class="muted">Disc or drum; modern cars include ABS (Anti-lock Braking System) and electronic brake force distribution.</p></div>
+          <div class="card"><h3>Electrical & electronics</h3><p class="muted">Battery, alternator, wiring, ECUs (engine control units), infotainment, sensors, and advanced driver assistance systems (ADAS).</p></div>
+          <div class="card"><h3>Powertrain</h3><p class="muted">Engine(s), transmission/gearbox, driveshafts, differential(s) — explained in the powertrain section.</p></div>
+          <div class="card"><h3>Climate & HVAC</h3><p class="muted">Heating, ventilation, and air conditioning systems for comfort and defogging.</p></div>
+        </div>
+      </section>
+
+      <section id="powertrain">
+        <h2>Powertrains: ICE, Hybrid, BEV</h2>
+        <p class="muted">Powertrain refers to how a car generates and applies motive power. The three main families are internal combustion engine (ICE), hybrid, and battery-electric vehicle (BEV).</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Internal Combustion Engine (ICE)</h3>
+            <p class="muted">Runs on gasoline, diesel or alternative liquid/gaseous fuels. Key elements: cylinders, pistons, crankshaft, intake/exhaust, fuel system, and ignition. Pros: mature tech and fueling infrastructure. Cons: emissions and mechanical complexity.</p>
+          </div>
+          <div class="card">
+            <h3>Hybrid (HEV / PHEV)</h3>
+            <p class="muted">Combines ICE and electric motor(s). HEVs recharge battery via regenerative braking and ICE; PHEVs (plug-in hybrids) add external charging capability for longer electric-only range.</p>
+          </div>
+          <div class="card">
+            <h3>Battery Electric Vehicle (BEV)</h3>
+            <p class="muted">Fully electric, powered by large battery packs and one or more electric motors. Pros: zero tailpipe emissions, high torque, simple drivetrain. Consider charging infrastructure, battery life, and lifecycle emissions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="performance">
+        <h2>Performance & common specs</h2>
+        <p class="muted">Typical technical specifications you'll see in car data sheets and reviews.</p>
+        <table>
+          <thead>
+            <tr><th>Spec</th><th>What it means</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Horsepower (hp / kW)</td><td>Engine power output; higher usually means quicker acceleration.</td></tr>
+            <tr><td>Torque (Nm / lb-ft)</td><td>Rotational force; important for pulling and acceleration from low speeds.</td></tr>
+            <tr><td>0–60 mph / 0–100 km/h</td><td>Acceleration benchmark.</td></tr>
+            <tr><td>Top speed</td><td>Maximum safe speed as tested or electronically limited.</td></tr>
+            <tr><td>Fuel economy / Efficiency</td><td>MPG, L/100km, or kWh/100km — depends on drivetrain and test cycle.</td></tr>
+            <tr><td>Towing capacity</td><td>Maximum recommended trailer weight for the vehicle.</td></tr>
+            <tr><td>Curb weight</td><td>Weight of car without passengers or cargo — affects performance and efficiency.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="safety">
+        <h2>Safety & ratings</h2>
+        <p class="muted">Key safety features and how cars are evaluated.</p>
+        <div class="grid">
+          <div class="card"><h3>Active safety</h3><p class="muted">Systems that help avoid collisions: ABS, traction control, lane-keep assist, automatic emergency braking (AEB).</p></div>
+          <div class="card"><h3>Passive safety</h3><p class="muted">Designed to protect occupants during a crash: seatbelts, airbags, crumple zones.</p></div>
+          <div class="card"><h3>Crash testing</h3><p class="muted">Independent organisations (e.g., Euro NCAP, IIHS, NHTSA) publish ratings from frontal, side, and rollover tests; check their latest results for specific models.</p></div>
+        </div>
+      </section>
+
+      <section id="maintenance">
+        <h2>Maintenance & common troubleshooting</h2>
+        <p class="muted">Regular maintenance keeps a car reliable and safe. Below are routine items and simple diagnostics.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Routine schedule</h3>
+            <ul class="muted">
+              <li>Oil & filter: every 5,000–15,000 km depending on oil type and manufacturer.</li>
+              <li>Tires: rotate every 8,000–12,000 km, check pressure monthly.</li>
+              <li>Brake fluid: typically every 2 years.</li>
+              <li>Air filter & cabin filter: inspect every 12 months.</li>
+              <li>Battery: test annually after 3 years of use.</li>
+            </ul>
+          </div>
+          <div class="card"><h3>Common problems & quick checks</h3>
+            <p class="muted">Engine won't start — check battery and terminals. Overheating — check coolant level and radiator fan. Vibration — check tires and wheel balance. Warning lights — consult manual or diagnostic tool (OBD-II).</p></div>
+          <div class="card"><h3>Diagnostic tools</h3><p class="muted">OBD-II scanners read engine codes; many smartphone adapters & apps exist for basic diagnostics.</p></div>
+        </div>
+      </section>
+
+      <section id="buying">
+        <h2>Buying guide (new vs used)</h2>
+        <p class="muted">Deciding factors: budget, usage, fuel type, maintenance expectations, reliability, insurance, and resale value.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>New car pros/cons</h3>
+            <p class="muted">Pros: warranty, latest safety tech, no wear. Cons: depreciation (biggest hit in first 2–4 years).</p>
+          </div>
+          <div class="card"><h3>Used car pros/cons</h3><p class="muted">Pros: lower price and slower depreciation. Cons: potential hidden issues; get inspection and vehicle history (accidents, flood, title).</p></div>
+          <div class="card"><h3>Checklist for test drive</h3><ul class="muted"><li>Inspect body and tires</li><li>Listen for unusual noises</li><li>Test brakes at speed</li><li>Try infotainment and climate controls</li><li>Request vehicle history & service records</li></ul></div>
+        </div>
+      </section>
+
+      <section id="fuels">
+        <h2>Fuels, energy & charging</h2>
+        <p class="muted">Different fuels and energy sources have different costs, emissions, and infrastructure requirements.</p>
+        <div class="grid">
+          <div class="card"><h3>Gasoline & diesel</h3><p class="muted">Common, well-understood fuels with dense energy per volume. Diesel often offers greater fuel efficiency but can emit more NOx and particulates without modern after-treatment systems.</p></div>
+          <div class="card"><h3>Compressed natural gas (CNG)</h3><p class="muted">Lower CO₂ per kWh than gasoline in some cases; requires dedicated tanks and fueling stations.</p></div>
+          <div class="card"><h3>Biofuels & synthetic fuels</h3><p class="muted">Can reduce lifecycle emissions if produced sustainably; availability varies by region.</p></div>
+          <div class="card"><h3>Electric (BEV)</h3><p class="muted">Charged from the grid. Charging levels: AC Level 1 (slow), AC Level 2 (home/fast), DC fast charging (high power). Consider range, charge time, and battery warranty.</p></div>
+        </div>
+      </section>
+
+      <section id="environment">
+        <h2>Environmental impact</h2>
+        <p class="muted">Assess emissions over the vehicle lifecycle: manufacturing (especially battery production), use-phase fuel/energy, and end-of-life recycling. Electrification reduces tailpipe emissions but lifecycle benefits depend on electricity mix and recycling practices.</p>
+        <div class="card" style="margin-top:10px">
+          <h3>How to reduce impact</h3>
+          <ul class="muted">
+            <li>Choose efficient vehicles and maintain them</li>
+            <li>Use public transport, carpool, or active mobility when possible</li>
+            <li>For EVs, charge using low-carbon electricity where possible</li>
+            <li>Recycle and follow proper battery disposal/reuse programs</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="glossary">
+        <h2>Glossary (quick reference)</h2>
+        <div class="grid">
+          <div class="card"><strong>ABS</strong> <div class="muted">Anti-lock Braking System; prevents wheel lock-up under heavy braking.</div></div>
+          <div class="card"><strong>Torque</strong> <div class="muted">Rotational force produced by engine/motor.</div></div>
+          <div class="card"><strong>HP / kW</strong> <div class="muted">Horsepower / kilowatts — measures power.</div></div>
+          <div class="card"><strong>Range</strong> <div class="muted">Distance a vehicle can drive on a single tank/charge.</div></div>
+          <div class="card"><strong>PHEV</strong> <div class="muted">Plug-in hybrid electric vehicle.</div></div>
+          <div class="card"><strong>Regenerative braking</strong> <div class="muted">Recovers energy during braking to recharge battery (in hybrids/EVs).</div></div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <h2>FAQ</h2>
+        <div class="card">
+          <div class="q" data-open="false"><strong>How often should I change engine oil?</strong><div class="a hidden">Follow the manufacturer's recommendation, commonly between 5,000–15,000 km depending on oil type and driving conditions.</div></div>
+          <div class="q" data-open="false"><strong>Are electric cars cheaper to maintain?</strong><div class="a hidden">Generally yes: fewer moving parts, no oil changes, and less brake wear due to regenerative braking. Battery health and replacement costs are the main long-term considerations.</div></div>
+          <div class="q" data-open="false"><strong>How do I read tire size?</strong><div class="a hidden">Example: 205/55R16 — 205mm width, 55% aspect ratio (height to width), radial construction, 16-inch wheel diameter.</div></div>
+        </div>
+      </section>
+
+      <section id="resources">
+        <h2>Resources & further reading</h2>
+        <p class="muted">Official vehicle manuals, independent crash-test organizations (e.g., IIHS, Euro NCAP), reputable automotive magazines, and manufacturer sites are good primary sources when researching a specific model.</p>
+      </section>
+
+      <footer>
+        This page is a compact, general-purpose reference. For model-specific advice, consult vehicle manuals and certified mechanics.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Simple search for the page
+    const input = document.createElement('input');
+    input.placeholder = 'Search this guide (type and press Enter)';
+    input.style.width='100%';input.style.padding='10px';input.style.margin='12px 0';input.style.borderRadius='8px';input.style.border='1px solid rgba(255,255,255,0.04)';input.style.background='transparent';input.style.color='inherit';
+    document.querySelector('main').insertBefore(input, document.querySelector('main').firstChild);
+    input.addEventListener('keydown', (e)=>{
+      if(e.key==='Enter'){
+        const q = e.target.value.trim().toLowerCase();
+        if(!q) return;
+        // find first matching section
+        const sections = [...document.querySelectorAll('main section')];
+        const found = sections.find(s => s.innerText.toLowerCase().includes(q));
+        if(found){
+          found.scrollIntoView({behavior:'smooth'});
+          found.style.transition='background 0.6s';
+          found.classList.add('highlight');
+          setTimeout(()=>found.classList.remove('highlight'),1800);
+        } else {
+          alert('No results found. Try different keywords (e.g., "battery", "oil", "hybrid").');
+        }
+      }
+    });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq .q').forEach(q=>{
+      q.addEventListener('click', ()=>{
+        const a = q.querySelector('.a');
+        const open = q.getAttribute('data-open') === 'true';
+        q.setAttribute('data-open', !open);
+        if(open){ a.classList.add('hidden'); } else { a.classList.remove('hidden'); }
+      })
+    });
+
+    // Smooth nav clicks
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth'});
+      })
+    });
+  </script>
+</body>
+</html>
